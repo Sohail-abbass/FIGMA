@@ -1,0 +1,357 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+.main{
+  
+    flex-basis:372px;
+height: 346px;
+border-radius: 10px;
+min-height: 0;
+padding: 10px;
+text-align: center;
+
+}
+.main #login{
+font-size: 30px;
+font-weight: 600;
+color: #000000;
+line-height: 36.51px;
+text-align: center;
+
+
+}
+.main .input-box{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+.input-box input{
+   width: 300px;
+   margin-bottom: 15px;
+   padding: 10px 6px;
+   border-radius: 6px;
+   outline: none;
+   border: 0;
+   color:#0f0e0e;
+   font-size: 22px;
+
+  background-color: #E8E8E8;
+
+}
+.main #login-btn{
+    margin-top: 12px;
+    padding: 8px 14px;
+    width: 290px;
+    border-radius: 100px;
+    background-color: #000000;
+    color:white;
+    font-size: 20px;
+}
+
+
+/* 
+                   section 1
+*/
+
+/* 
+
+
+.new-task button{
+    padding: 6px;
+    font-size: 18px;
+    outline:none;
+    border:0;
+    background-color: white;
+    cursor: pointer;
+}
+.left{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border:22px solid red; */
+    
+}
+
+
+.left button:hover {
+    background-color: black;
+    color: white;
+}
+.left button{
+    width: 250px;
+margin-top: 20px;
+border-radius: 0px, 100px, 100px, 0px;
+font-size: 20px;
+border: 0px;
+background-color: white;
+
+
+}
+.menu a{
+    text-decoration: none;
+}
+.menu button {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    margin: 10px;
+    cursor:pointer;
+    color:black;
+    border-radius: 0 20px 20px 0; /* Rounded corners on the right side */
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.menu button:active {
+    /* Your active styles here */
+    background-color: black; /* Change background color to red when active */
+    color: #ffffff; /* Change text color to white when active */
+    border-color: #000000; /* Change border color to black when active */
+}
+
+
+.menu button i {
+  
+    padding-right: 20px;
+    padding-left: 20px;
+    vertical-align: middle; 
+  
+}
+
+.logout button{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 0px, 100px, 100px, 0px;
+}
+.logout button i{
+    padding-right: 20px;
+    padding-left: 20px;
+    vertical-align: middle; 
+}
+.right{
+    padding:10px;
+    flex-basis: 70%;
+}
+
+
+
+.set .clock i{
+    margin-right: 3px;
+}
+
+
+ 
+.unChecked{
+    /* margin-right: 100px; */
+       font-size: 23px;
+       font-weight: 540;
+       /* border:3px solid red; */
+     
+   }
+   /* Style for checkbox */
+   .task input[type="checkbox"] {
+       margin-right: 17px; /* Adjust margin as needed */
+       transform: scale(1.7);
+   }
+   .task{
+       /* background-color: green; */
+       margin-bottom: 17px;
+       padding:10px;
+       margin-left: 20px;
+       background-color: blue;
+   }
+   .task .label{
+       font-size: 25px;
+       margin-left: 15px;
+   }
+   .task .due-date {
+       display: block; /* Display due date below the label */
+       margin-top: 3px;
+       margin-left: 50px; /* Adjust margin as needed */
+       font-size: 22px;
+   }
+   .icon{
+       margin-right: 3px;
+       font-size: 19px;
+       color:rgb(193, 36, 36);
+   }
+   
+   
+   h2{
+       padding: 10px;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       font-size: 25px;
+   }
+input[type="text"] {
+    border: none;
+    border-bottom: 1px solid black; /* Only bottom border */
+    margin-bottom: 10px;
+    outline: none; /* Remove default focus style */
+    padding-bottom: 5px; /* Adjust padding for bottom border */
+    width: 100%;
+    font-size: 18px;
+}
+
+#section1 {
+    position: relative; /* Ensure positioning context for the absolute positioned overlay */
+    padding: 15px 0px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: white;
+    z-index: 998;
+}
+#section2{
+    padding: 15px 0px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: white;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0; /* Overlay color */
+    opacity: 0.5; /* Overlay opacity */
+    z-index: 999; /* Ensure it appears beneath other content */
+    display: none; /* Initially hidden */
+}
+
+.popup {
+    width: 50%;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 2px #ccc;
+    border-radius: 7px;
+    background-color: white;
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure it appears above the overlay */
+}
+
+
+
+
+
+.popup form {
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.popup form .detail p i {
+    padding: 5px;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.popup form .detail p {
+    font-size: 25px;
+}
+
+.popup .description input {
+    padding: 10px; /* Adjust input padding */
+    font-size: 18px; /* Adjust input font size */
+    border: none;
+    border-bottom: 1px solid black; /* Only bottom border */
+    margin-bottom: 10px;
+    outline: none;
+    width: 100%;
+}
+
+.popup .Buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup form h2 {
+    padding: 8px;
+    font-size: 27px;
+}
+
+.popup .Buttons button {
+    margin-top: 12px;
+padding: 8px 14px;
+width: 290px;
+border-radius: 100px;
+background-color: white;
+color:black;
+font-size: 20px;
+border:none;
+cursor: pointer;
+   
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.popup .Buttons #save{
+margin-top: 12px;
+padding: 8px 14px;
+width: 290px;
+border-radius: 100px;
+background-color: #000000;
+color:white;
+font-size: 20px;
+}
+
+.popup .Buttons button:active {
+    background-color: black;
+    color: white;
+}
+
+
+.heading{
+    font: 30px;
+    padding: 10px;
+
+} 
+
+
+.locate{
+    border:2px solid rgb(140, 0, 255);
+    width: 80%;
+    margin-left: 40px;
+    padding: 12px;
+    display: flex;
+    margin-bottom: 10px;
+    
+}
+.locate .detail {
+    margin-left: 20px;
+   
+  
+
+}
+.locate i{
+    font-size: 19px;
+    color: 
+    rgb(193, 36, 36);
+}
+.locate .detail #country{
+    font-size: 26px;
+    font-weight: 600;
+}
+.locate .detail #cordinate{
+    font-size: 18px;
+    color: #a69e9e;
+} */
